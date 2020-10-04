@@ -1,0 +1,847 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Myriad", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#15b4e9), color-stop(37.4233%, #008fcf), to(#18519f));
+  background-image: -o-linear-gradient(bottom, #15b4e9 0%, #008fcf 37.4233%, #18519f 100%);
+  background-image: linear-gradient(to top, #15b4e9 0%, #008fcf 37.4233%, #18519f 100%);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Сброс стилей у кнопки.
+*/
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+@font-face {
+  font-family: "Futura";
+  font-display: swap;
+  src: url("../fonts/FuturaPTBold.woff") format("woff"), url("../fonts/FuturaPTBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  font-display: swap;
+  src: url("../fonts/FuturaPTLight.woff") format("woff"), url("../fonts/FuturaPTLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  font-display: swap;
+  src: url("../fonts/FuturaPTMedium.woff") format("woff"), url("../fonts/FuturaPTMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-display: swap;
+  src: url("../fonts/Myriad_Pro_Black_SemiExt_Bold.woff") format("woff"), url("../fonts/Myriad_Pro_Black_SemiExt_Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-display: swap;
+  src: url("../fonts/MyriadPro-Bold.woff") format("woff"), url("../fonts/MyriadPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-display: swap;
+  src: url("../fonts/MyriadPro-LightCond.woff") format("woff"), url("../fonts/MyriadPro-LightCond.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-display: swap;
+  src: url("../fonts/MyriadPro-Semibold.woff") format("woff"), url("../fonts/MyriadPro-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Compact";
+  font-display: swap;
+  src: url("../fonts/CompactC-Bold.woff") format("woff"), url("../fonts/CompactC-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.accordion__text {
+  display: none;
+}
+
+.title {
+  font-family: "Myriad";
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 38px;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.title--white {
+  color: #fff;
+}
+
+.title--white span {
+  color: #ffec00;
+}
+
+.title--blue {
+  color: #018dce;
+}
+
+.title--yellow {
+  color: #ffec00;
+}
+
+.title--red {
+  color: #ff0000;
+}
+
+.btn {
+  display: inline-block;
+  color: #000000;
+  font-family: "Futura";
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #ffec00;
+  padding: 5px 30px;
+  border-radius: 15px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+  background-color: #feef3f;
+}
+
+hr {
+  margin: 10px 0px 0px 0px;
+}
+
+.header {
+  padding: 35px 0px;
+  text-align: center;
+  background-color: #fff;
+  background-image: url(../img/milk-bgi.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  padding-bottom: 214px;
+}
+
+.header__logo {
+  text-align: center;
+  max-width: 359px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.main {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(7%, white), color-stop(11%, white), color-stop(60%, #dbdbdb), color-stop(65%, #d1d1d1), color-stop(96%, #fefefe), to(#fefefe));
+  background-image: -o-linear-gradient(top, white 7%, white 11%, #dbdbdb 60%, #d1d1d1 65%, #fefefe 96%, #fefefe 100%);
+  background-image: linear-gradient(to bottom, white 7%, white 11%, #dbdbdb 60%, #d1d1d1 65%, #fefefe 96%, #fefefe 100%);
+  position: relative;
+  padding: 90px 0px 120px 0px;
+}
+
+.main__box {
+  width: 320px;
+  position: absolute;
+  top: -232px;
+  z-index: 20;
+  left: 50%;
+  -webkit-transform: translateX(-160px);
+      -ms-transform: translateX(-160px);
+          transform: translateX(-160px);
+}
+
+.main__subtitle {
+  font-size: 25px;
+  color: #0c61c6;
+  text-align: center;
+}
+
+.main__text {
+  color: #666666;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.main__block {
+  position: relative;
+}
+
+.main__img {
+  text-align: right;
+}
+
+.main__certificate {
+  text-align: right;
+}
+
+.main__certificate img {
+  width: 250px;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn-wrapper--certificate {
+  position: relative;
+  z-index: 1;
+}
+
+.icons-main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.icons-main__wrapper {
+  width: 70px;
+}
+
+.list-advantages {
+  color: #018dce;
+  font-size: 25px;
+  margin: 0px 0px 10px 0px;
+}
+
+.mechanism {
+  background-color: #11afe5;
+  padding: 35px 0px;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+}
+
+.mechanism::before {
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  top: -110px;
+  left: 0px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url(../img/cows-1-mobile.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 107px;
+}
+
+.mechanism__text {
+  color: #ffec00;
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.accordion {
+  margin-top: 30px;
+}
+
+.accordion__item {
+  margin: 0px 0px 15px 0px;
+}
+
+.accordion__item:nth-child(2) {
+  text-align: right;
+}
+
+.accordion__block {
+  color: #ffec00;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 30px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.accordion__block--left {
+  position: relative;
+  max-width: 200px;
+  text-align: right;
+}
+
+.accordion__block--left::after {
+  content: "";
+  width: 236px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+}
+
+.accordion__block--right {
+  margin-top: -50px;
+  text-align: right;
+  position: relative;
+}
+
+.accordion__block--right::after {
+  content: "";
+  width: 236px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: -18px;
+}
+
+.accordion__btn {
+  font-weight: 600;
+  padding-left: 30px;
+  display: block;
+  text-align: right;
+}
+
+.accordion__btn--left {
+  display: block;
+  max-width: 193px;
+  text-align: right;
+}
+
+.accordion__img {
+  position: relative;
+  top: -75px;
+  z-index: -1;
+  max-width: 350px;
+}
+
+.family {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0px 130px 0px;
+}
+
+.family__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.family__column {
+  margin: 0px 0px 20px 0px;
+}
+
+.family__img {
+  display: block;
+}
+
+.family__list {
+  color: #018dce;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.btn--desc {
+  display: none;
+}
+
+.family-list__decor img {
+  width: 15px;
+  height: 15px;
+  margin: 10px auto;
+}
+
+.need {
+  background-color: #018dce;
+  padding: 35px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.need::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -110px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  background-image: url("../img/cows-3-mobile.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 111px;
+}
+
+.need__info {
+  color: #fff;
+  font-size: 18px;
+  margin: 0px 0px 30px 0px;
+  font-weight: 600;
+  position: relative;
+}
+
+.need__info--left {
+  padding: 0px 0px 0px 30px;
+}
+
+.need__info--left::after {
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  bottom: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ffec00;
+}
+
+.need__info--right {
+  text-align: right;
+  padding: 0px 30px 0px 0px;
+}
+
+.need__info--right::after {
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -35px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ffec00;
+}
+
+.need .container {
+  overflow: hidden;
+}
+
+.mechanism .container {
+  overflow: hidden;
+}
+
+.research {
+  padding: 35px 0px;
+  background-color: #fff;
+  padding-bottom: 142px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e5e8), color-stop(18%, #edeaed), color-stop(84%, #fdfdfd), color-stop(88%, #fefefe));
+  background-image: -o-linear-gradient(top, #e8e5e8 0%, #edeaed 18%, #fdfdfd 84%, #fefefe 88%);
+  background-image: linear-gradient(to bottom, #e8e5e8 0%, #edeaed 18%, #fdfdfd 84%, #fefefe 88%);
+}
+
+.research__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.research__title {
+  color: #ff0000;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.research__text {
+  color: #666666;
+  margin: 0px 0px 10px 0px;
+  font-size: 18px;
+}
+
+.research__subtitle {
+  color: #018dce;
+  font-size: 20px;
+  margin: 0px 0px 10px 0px;
+}
+
+.research__info {
+  color: #666666;
+  background-color: #e6e6e6;
+  font-weight: 300;
+  margin: 0 -10px;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.research__info--visible {
+  margin-top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.benefits {
+  background-color: #018dce;
+  padding: 35px 0px;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+}
+
+.benefits::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -110px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  background-image: url("../img/cows-2-mobile.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 111px;
+}
+
+.benefits__subtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  margin: 0px 0px 25px 0px;
+}
+
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.benefits__item {
+  text-align: center;
+  font-size: 17px;
+  max-width: 250px;
+  margin: 0px 0px 20px 0px;
+}
+
+.benefits__item:nth-child(3) {
+  border-radius: 155px/74px;
+}
+
+.benefits__item span {
+  text-transform: uppercase;
+}
+
+.benefits__item--yellow {
+  color: #edff2a;
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  border-radius: 155px/65px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.benefits__item--white {
+  color: #fff;
+}
+
+.reviews {
+  background-color: #fff;
+  color: #666666;
+  padding: 35px 0px;
+}
+
+.reviews__name {
+  font-family: "Myriad";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.reviews__text {
+  font-family: "Myriad";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.reviews__row {
+  margin: 0px 0px 15px 0px;
+}
+
+.reviews__img--desc {
+  display: none;
+}
+
+.reviews__row--right {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url(../img/milk-desc-2.png);
+    padding-bottom: 93px;
+  }
+
+  .main__block {
+    margin-top: 50px;
+    max-width: 759px;
+  }
+
+  .main__certificate {
+    position: absolute;
+    top: -32px;
+    right: 127px;
+  }
+
+  .btn-wrapper--milk {
+    text-align: right;
+    position: relative;
+    right: 86px;
+  }
+
+  .list-advantages {
+    margin: 17px 0px 10px 0px;
+  }
+
+  .mechanism::before {
+    content: "";
+    background-image: url(../img/cows-1-desc.png);
+  }
+
+  .accordion {
+    position: relative;
+  }
+
+  .accordion__block--left {
+    max-width: unset;
+    text-align: left;
+  }
+
+  .accordion__block--left::after {
+    width: 500px;
+  }
+
+  .accordion__block--right::after {
+    right: 0;
+    left: -18px;
+    width: 500px;
+  }
+
+  .accordion__block--right {
+    margin-top: 0px;
+    text-align: left;
+    position: relative;
+  }
+
+  .accordion__btn {
+    max-width: 450px;
+  }
+
+  .accordion__btn--left {
+    max-width: 450px;
+  }
+
+  .accordion__img {
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: -26px;
+  }
+
+  .accordion__img img {
+    width: 300px;
+  }
+
+  .accordion__block--left br {
+    display: none;
+  }
+
+  .family {
+    padding: 35px 0px 130px 0px;
+  }
+
+  .family__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .need::before {
+    content: "";
+    background-image: url(../img/cows-3-desc.jpg);
+  }
+
+  .benefits::before {
+    content: "";
+    background-image: url(../img/cows-2-desc.jpg);
+  }
+
+  .benefits__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .benefits__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+
+  .reviews__row--img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .reviews__img--desc {
+    display: block;
+  }
+
+  .reviews__img--desc img {
+    width: 900px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main__img {
+    position: absolute;
+    top: 69px;
+    left: -350px;
+  }
+
+  .need .container {
+    overflow: visible;
+  }
+
+  .mechanism .container {
+    overflow: visible;
+  }
+}
+
+.webp .header{ background-image: url(../img/milk-bgi.webp); }
+
+.webp .mechanism::before{ background-image: url(../img/cows-1-mobile.webp); }
+
+.webp .need::before{ background-image: url(../img/cows-3-mobile.webp); }
+
+.webp .benefits::before{ background-image: url(../img/cows-2-mobile.webp); }
+
+@media (min-width: 768px){
+
+  .webp .header{ background-image: url(../img/milk-desc-2.webp); }
+}
+
+@media (min-width: 768px){
+
+  .webp .mechanism::before{ background-image: url(../img/cows-1-desc.webp); }
+}
+
+@media (min-width: 768px){
+
+  .webp .need::before{ background-image: url(../img/cows-3-desc.webp); }
+}
+
+@media (min-width: 768px){
+
+  .webp .benefits::before{ background-image: url(../img/cows-2-desc.webp); }
+}
